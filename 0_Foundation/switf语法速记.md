@@ -1,4 +1,4 @@
-#类型
+#(一)类型
 
 ##常见类型
 
@@ -44,6 +44,7 @@ var someProtocol:protocol<protocol1,protocol2>
 
 ## Array
 
+````swift
 //声明
 var array1:[String] = ["0","1","2","3"]
 var array = [String]()
@@ -52,8 +53,8 @@ var array = [String]()
 array1 += ["4","5"]
 array1[1...3] = ["a","b","c","d","e"]
 //array1.append
-//array1.removeAtIndex(<#T##index: Int##Int#>)
-//array1.insert(<#T##newElement: Element##Element#>, atIndex: <#T##Int#>)
+//array1.removeAtIndex(<index:Int Int>)
+//array1.insert(<newElement:Element>, atIndex:<Int>)
 
 //获取值
 print(array1)
@@ -73,6 +74,7 @@ for bgen in array1.enumerate()
 {
     print("元素下标:\(bgen.0)  元素值:\(bgen.1)")
 }
+````
 
 ## dictionary 
 
@@ -144,7 +146,7 @@ struct Sharp{
     }
 }
 ````
-##协议pro
+##协议
 
 ````swift
 
@@ -170,22 +172,42 @@ protocol Sharp{
 ````
 
 ##对象
+
 ````swift
+class Card: NSObject {
+    
+}
 class Person: NSObject {
 
     //私有对象
-    private var _name:String!
+    private var _name:String?
     
+    var gender:String
+    var gender1:String?
+    
+    //arc
+    /*
+    weak 用于可空对象，unowned用于非空对象
+    weak 调用被释放的对象会返回nil，unowned 调用被释放的对象会出异常
+    建议 如果能够确定在访问时不会已被释放的话，尽量使用 unowned，如果存在被释放的可能，那就选择用 weak
+    */
+    weak var bastFriend:Person?
+    unowned var identityCard:Card
+    
+
     //构造函数
-    override init() {
+    init(name: String) {
+        gender = "male"
+        identityCard = Card()
         super.init()
-        
-    }
-    //带参数的构造函数
-    init(text: String) {
-        super.init();
         //初始化。。。
-        self.name = text;
+        self.name = name
+    }
+    //便利构造函数
+    convenience init(name:String,gender:String)
+    {
+        self.init(name:name)
+        self.gender = gender
     }
     
     //析构函数
@@ -196,22 +218,37 @@ class Person: NSObject {
     //属性
     var name:String{
         get{
-            return _name
+            return _name!
         }
         set{
             _name = newValue;
         }
+        //可以自定newValue的名称
+        //set(newName){
+        //   _gender = newName
+        //}
     }
     
     //观察者模式的属性
+    //newValue 和 oldValue 
     var age:Int = 0{
-        
-        willSet{
-            
-        }
-        didSet{
-            
-        }
+        willSet{}
+        didSet{}
+    }
+    
+    //方法
+    func sayName(){
+        print("hello name")
+    }
+    
+    //静态方法
+    static func say(){
+        print("hello")
+    }
+    
+    //类方法
+    class func say1(){
+        print("hello1")
     }
     
     //方法重载
@@ -219,11 +256,35 @@ class Person: NSObject {
         return ""
     }
     
+    //懒属性
+    //两种方式，方法加载和闭包加载
+    lazy var friends:[String] = self.findfriends()
+    func findfriends()->[String]{
+        return ["bob","bill","jobs"]
+    }
+    lazy var bastFirends:String = {
+        print(" print bastFirends")
+        return "liuyanwei"
+        }()
+    //调用
+    //NSLog("bastFirends:%@ and friends is:[%@] ",p.bastFirends,p.friends)
+    
+    //下标脚本
+    subscript(name:String)->String{
+        get{
+            return self.name
+        }
+        set{
+            self.name = newValue;
+        }
+    }
+    
+
 }
 ````
 
 
-#语法
+#（二）语法
 
 ##流程控制
 
@@ -346,8 +407,8 @@ func hello(var msg:String){
 func hello(name name:String ,withAge age:Int){}
 func hello1(name:String ,age:Int){}
 //调用
-hello(name: <#T##String#>, withAge: <#T##Int#>)//默认的参数命名
-hello1(<#T##name: String##String#>, age: <#T##Int#>)//指定的参数命名
+hello(name:<String>, withAge:<Int>)//默认的参数命名
+hello1(<name:String  String>, age: <Int>)//指定的参数命名
 
 //匿名函数
 //{}可以作为匿名函数
@@ -467,10 +528,10 @@ catch  {
 ## 断言
 
 ````swift
-assert(assert(<#T##condition: Bool##Bool#>)
-assert(<#T##condition: Bool##Bool#>, <#T##message: String##String#>)
+assert(assert(<condition:Bool Bool>)
+assert(<condition: Bool Bool>, <message: String String>)
 assertionFailure()
-assertionFailure(<#T##message: String##String#>)
+assertionFailure(<message: String String>)
 ````
 ## typealias 
 > 这个关键字可以给类，结构，枚举等增加别名，也常常用于合并协议后的别名
@@ -512,7 +573,7 @@ extension Person{
 }
 ````
 
-#高级
+#（三）高级
 
 
 ##柯里化 (Currying)

@@ -1,13 +1,13 @@
-# ios-tips
-ios开发当中常用遇到的问题和解决方法的收集，包括ios和swift
+[ios-tips](https://github.com/coolnameismy/ios-tips)是ios开发当中常用遇到的问题和解决方法的收集，包括ios和swif。
+一共包括4个部分
 
+-   0_Foundation
+-   1_UIKit
+-   2_ThirdParty
+-   3_Other
 
-## 今后更新
+目前已经整理完0_Foundation，开始整理UIKit。也欢迎大家给ios-tips补充内容。
 
--  UIKit
--  第三方库
--  好用的示例程序
-
-## 希望
-
-本库主要是ios开发中经常遇到的一些基础问题的整理，省去搜百度的时间。目前都是我自己整理的内容，欢迎大家多多补充。
+##补充要求
+1.  格式是md
+2.  tips都很简短，不要涉及复杂的原理和方法
