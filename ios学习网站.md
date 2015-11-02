@@ -16,7 +16,7 @@
 -	(念茜的博客)[http://nianxi.net/]
 -	(不掏蜂窝的熊)[http://www.hotobear.com/]
 -	(玉令天下的博客)[http://yulingtianxia.com/]
--	(Kitten's 时间胶囊)[http://www.kittenyang.com/]
+
 
 
 -	()[]
