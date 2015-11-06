@@ -573,6 +573,38 @@ extension Person{
 }
 ````
 
+## defer
+>   defer{} 可以将大括号中的代码段延迟到它所在的作用于结束后在执行
+
+````swift
+    print("1-1")
+    defer{
+      print("1-2")
+    }
+    print("1-3")
+
+    输出：
+        1-1
+        1-3
+        1-2
+````
+
+## Guard
+>   guard充当了警卫员一职，保证条件满足情况下，才会让你通过，否则只能else让你返回了！切记else中一定需要有返回的语句，比如return、continue、break、throw这种提早退出的关键字
+
+````swift
+
+  // 这里使用if 和 guard进行对比 你会懂的更多
+  if age < 13 {
+      return  //当年龄小于13时 程序返回 不进行之后的操作
+  }
+
+  guard age >= 13 else{
+    return
+  }
+
+````
+
 #（三）高级
 
 
