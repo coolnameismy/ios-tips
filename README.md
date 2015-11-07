@@ -8,6 +8,7 @@
 -   3_Other :其他
 -   4_LearningResources:学习资源
 -	5_Advanced :高级技巧
+-	iOS学习资源
 
 目前已经整理完0_Foundation，开始整理UIKit。也欢迎大家给ios-tips补充内容。
 
