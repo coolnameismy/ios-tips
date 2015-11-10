@@ -591,7 +591,7 @@ void test1(){
 
 ##  反射
 
-````objc
+ 
 
 ###  基本方法
 
@@ -607,6 +607,8 @@ person1 showMessage:@"Hello,world!"];
 //动态调用一个方法，注意如果有参数那么参数类型只能为ObjC对象，并且最多只能有两个参数
 [person1 performSelector:@selector(showMessage:) withObject:@"Hello,world!"];
   
+````
+
 ###  动态生成一个类
 
 ````objc
