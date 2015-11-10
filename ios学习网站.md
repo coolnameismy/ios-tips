@@ -15,8 +15,12 @@
 -	(刘彦玮的技术博客)[http://liuyanwei.jumppo.com]
 -	(念茜的博客)[http://nianxi.net/]
 -	(不掏蜂窝的熊)[http://www.hotobear.com/]
+-	[唐巧](http://blog.devtang.com)
 -	(玉令天下的博客)[http://yulingtianxia.com/]
 
+## 原文博客
+---
+-	[holko](http://holko.pl/archive)
 
 
 -	()[]
