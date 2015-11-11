@@ -4,7 +4,7 @@
 -	(nshipster)[http://nshipster.cn/]
 -	(nshipster)[http://nshipster.cn/]
 -   (appcoda)[http://www.appcoda.com/]
-
+-	(伯乐在线)[http://blog.jobbole.com]
 
 ## 技术博客
 ---
