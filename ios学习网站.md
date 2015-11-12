@@ -9,10 +9,10 @@
 
 ## 技术博客
 ---
--	[唐巧](http://blog.devtang.com)
--	[刘彦玮的技术博客](http://liuyanwei.jumppo.com)
--	[念茜的博客](http://nianxi.net/)
--	[iwangke](http://www.iwangke.me/)
+
+-	[刘彦玮的技术博客](http://liuyanwei.jumppo.com) | <http://liuyanwei.jumppo.com/pages/rss.xml>
+-	[念茜的博客](http://nianxi.net/) | <http://nianxi.net>
+-	[iwangke](http://www.iwangke.me/) | <http://www.iwangke.me>
 -	[OneV's Den](http://onevcat.com) | <http://onevcat.com/atom.xml>
 -	[破船之家](http://beyondvincent.com) | <http://beyondvincent.com/atom.xml>
 -	[NSHipster](http://nshipster.cn) | <http://nshipster.cn/feed.xml>
