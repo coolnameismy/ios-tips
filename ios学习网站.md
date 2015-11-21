@@ -73,6 +73,7 @@
 ## 原文博客
 ---
 -	[holko](http://holko.pl/archive)
+-	[krakendev](http://krakendev.io)
 
 ## 工具
 ---
