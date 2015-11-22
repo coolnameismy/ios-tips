@@ -525,6 +525,7 @@ catch  {
     print("all error")
 }
 ````
+
 ## 断言
 
 ````swift
@@ -605,6 +606,30 @@ extension Person{
 
 ````
 
+## OptionSetType
+
+OptionSetType是NSOption在swift的替代
+
+````swift
+
+public struct UIViewAutoresizing : OptionSetType {
+    public init(rawValue: UInt)
+    public static var None: UIViewAutoresizing { get }
+    public static var FlexibleLeftMargin: UIViewAutoresizing { get }
+    public static var FlexibleWidth: UIViewAutoresizing { get }
+    public static var FlexibleRightMargin: UIViewAutoresizing { get }
+    public static var FlexibleTopMargin: UIViewAutoresizing { get }
+    public static var FlexibleHeight: UIViewAutoresizing { get }
+    public static var FlexibleBottomMargin: UIViewAutoresizing { get }
+}
+
+//使用,选择多个
+[FlexibleLeftMargin,FlexibleWidth]
+
+
+````
+
+
 #（三）高级
 
 
@@ -636,30 +661,45 @@ var str:String = {
 ````swift
 
 class Person {
-    func hello(name:String) -> String{
-        return "hello \(name)"
+    
+    //普通方法
+    func hi(name:String) -> String{
+        return "hi \(name)"
+    }
+
+    //静态方法
+    class func hello(){
+        NSLog("hello")
     }
 }
 
 let person = Person()
 
 //常规方法调用
-person.hello("liuyanwei")
+person.hi("liuyanwei")
+Person.hello()
 
 //利用方法名调用
-let funcOnPerson = Person.hello
-funcOnPerson(person)("liuyanwei")
+let funcOnPerson1 = Person.hi
+funcOnPerson1(person)("liuyanwei")
+
+//调用静态方法
+let funcOnPerson2 = Person.hello
+funcOnPerson2()
 
 ````
 
 ##swift单例标准写法
+
 ````swift
-private let sharedInstance = MyManager()
+
 class MyManager  {
+    static private let sharedInstance = MyManager()
     class var sharedManager : MyManager {
         return sharedInstance
     }
 }
+
 ````
 
 
