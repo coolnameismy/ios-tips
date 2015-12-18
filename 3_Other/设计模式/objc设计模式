@@ -1,0 +1,13 @@
+＝＝＝＝＝＝＝＝＝＝＝＝＝objc单例模式＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
++ (instancetype)sharedManager
+{
+    static PhotoManager *sharedPhotoManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedPhotoManager = [[PhotoManager alloc] init];
+        sharedPhotoManager->_photosArray = [NSMutableArray array];
+    });
+    return sharedPhotoManager;
+}
+
