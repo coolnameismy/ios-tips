@@ -1,5 +1,8 @@
-Itable使用
-//基本用法
+## table基本用法
+
+
+````objc
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     // Return the number of sections.
@@ -43,9 +46,13 @@ Itable使用
 
 }
 
-自定义UITableViewCell有两种方法：
+````
+
+## 自定义UITableViewCell有两种方法：
 
 1:利用xib
+
+````objc
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
@@ -61,8 +68,12 @@ Itable使用
     return cell;
 }
 
+````
 
 2:使用NSBundle
+
+
+````objc
  
     static NSString *tableCellIdentifier = @"name";
     TableViewCell1 *cell = (TableViewCell1 *)[tableView dequeueReusableCellWithIdentifier:tableCellIdentifier];
@@ -94,10 +105,15 @@ Itable使用
     if (!self) {
         return nil;
     }
+````
 
 
 
 3:使用故事版 （注意1:设置Identifier2:设置prototype cell 1 3：配置cell的class）
+
+
+````objc
+
 1 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 2 {
 3     //这个是在storyboard中设置的identifier
@@ -108,7 +124,8 @@ Itable使用
 8 }
 
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -139,10 +156,16 @@ Itable使用
     cell.lable1.text = [self.flilterData objectAtIndex:indexPath.row];
     return cell;
 }
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-#pragma mark 搜索查询
+````
+
+
+## 搜索查询
+
+````objc
+
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+
    // NSLog(@"%@",searchBar.text);
 }
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
@@ -193,4 +216,5 @@ Itable使用
 }
 
 
+````
 

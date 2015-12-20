@@ -1,8 +1,0 @@
-方法1：
-self.tableView.tableFooterView = [UIView new];
-
-方法2
-UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
-v.backgroundColor =  [UIColor colorWithWhite:0.951 alpha:1.000];
-[self.tableView setTableFooterView:v];
-
