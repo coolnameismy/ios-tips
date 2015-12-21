@@ -1,6 +1,7 @@
-修改SearchBar的Cancel Button 的Title
+## 修改SearchBar的Cancel Button 的Title
 
 
+````objc 
 //  注意点：
 //       使用iOS8 SDK ，本次 UISearchBar适用于iOS7(+)版本，如果想要适配iOS6，则需要对应适配iOS6.
 //  例如：
@@ -21,3 +22,5 @@
         }
     }
 } 
+
+````
