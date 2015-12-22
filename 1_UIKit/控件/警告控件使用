@@ -1,0 +1,43 @@
+1:alertview使用
+//显示alert提示
+-(void)alert:(NSString *)msg{
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"messaeg" message:msg delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:@"取消", nil];
+    [alert show];
+}
+
+2:actionsheet使用
+1:继承委托
+UIActionSheetDelegate
+2:实现
+-(void)showActionSheet:(UIView *) view{
+    UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"title" delegate:self cancelButtonTitle:@"canbutton" destructiveButtonTitle:@"破坏性按钮" otherButtonTitles:@"sina",@"tengxun" ,nil];
+    sheet.actionSheetStyle = UIActionSheetStyleAutomatic;
+    [sheet showInView:view];
+    
+}
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"click sheet at index : %li",(long)buttonIndex);
+}
+
+==============swift======================
+
+import UIKit
+import Foundation 
+
+public class Common: NSObject,UIActionSheetDelegate {
+   
+    
+    public func showSheet(view:UIView){
+        var sheet:UIActionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "cancel", destructiveButtonTitle: "breakbutton", otherButtonTitles: "other1","other2");
+        sheet.actionSheetStyle = UIActionSheetStyle.BlackTranslucent;
+        sheet.showInView(view);
+       
+        
+    }
+    public func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int)
+    {
+        NSLog("click in index ;%d", buttonIndex);
+    }
+    
+}

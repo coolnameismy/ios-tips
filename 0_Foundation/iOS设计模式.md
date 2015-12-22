@@ -1,5 +1,6 @@
-＝＝＝＝＝＝＝＝＝＝＝＝＝objc单例模式＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+## 单例模式
 
+### objc单例标准写法
 + (instancetype)sharedManager
 {
     static PhotoManager *sharedPhotoManager = nil;
@@ -11,3 +12,15 @@
     return sharedPhotoManager;
 }
 
+### swift单例标准写法
+
+````swift
+
+class MyManager  {
+    static private let sharedInstance = MyManager()
+    class var sharedManager : MyManager {
+        return sharedInstance
+    }
+}
+
+````

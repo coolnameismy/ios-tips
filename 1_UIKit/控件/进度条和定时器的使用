@@ -1,0 +1,24 @@
+进度条和定时器的使用
+@implementation MainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //[self showScreenInfo];
+  
+    
+    //定时器的使用
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(download) userInfo:nil repeats:YES];
+    
+
+    
+}
+
+-(void)download{
+    self.myprogress.progress = self.myprogress.progress+0.1;
+    if(self.myprogress.progress ==1){
+        [timer invalidate];
+        [self alert:@"下载完成"];
+    }
+    
+}
+@end
