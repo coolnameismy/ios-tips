@@ -1,7 +1,7 @@
 
-## 基本动画
 
-使用animateWithDuration
+
+##  使用animateWithDuration
 
 ````swift
 
@@ -21,7 +21,7 @@
 
 ````
 
-使用begin和commit模式示例
+## 使用begin和commit模式示例
 
 ````swift
 
