@@ -1,11 +1,19 @@
-json-framework的使用
+## json-framework的使用
 
-＝＝＝＝＝＝＝＝＝＝＝＝配置 以4.01为准＝＝＝＝＝＝＝＝＝＝＝＝
+## 配置 以4.01为准
+
+````objc
+
 1:手动：下载源码后将文件夹中src－main－objc中代码考到项目中
 2:自动：pod 'SBJson', '~> 4.0.1'
 
-＝＝＝＝＝＝＝＝＝＝＝＝使用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-1:设置代码执行block和初始化工具
+````
+
+## 使用
+
+````objc
+
+    //1:设置代码执行block和初始化工具
   
     //初始化读取类
 	SBJson4Writer *writer = [[SBJson4Writer alloc] init];
@@ -19,8 +27,11 @@ json-framework的使用
     //执行解析
 	[parser parse:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
 
-＝＝＝＝＝＝＝＝＝＝＝＝解析例子＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+````
 
+## 解析例子
+
+````objc
 
 －－－－－－－－－解析为string
  SBJson4Writer *writer = [[SBJson4Writer alloc] init];
@@ -59,3 +70,6 @@ NSLog(@"key=北京%@",[china objectForKey:@"北京"]);
         //NSLog(@"Found: %@",str);
 
     };
+
+````
+

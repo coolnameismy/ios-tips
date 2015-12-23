@@ -1,7 +1,9 @@
-SVPullToRefr
+##  SVPullToRefr的使用
 
 
-  //注册下拉刷新功能
+## 注册下拉刷新功能
+
+````objc
     __weak BaseTableViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf insertRowAtTop];
@@ -10,8 +12,13 @@ SVPullToRefr
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         [weakSelf insertRowAtBottom];
     }];
+````
 
-//业务步骤
+
+## 业务步骤
+
+````objc
+
     //开始更新
     [self.tableView beginUpdates];
     
@@ -23,14 +30,20 @@ SVPullToRefr
     //停止菊花
     [self.tableView.pullToRefreshView stopAnimating];
 
+````
 
+## 程序自动调用下拉刷新
 
-3、程序自动调用下拉刷新
+````objc
 
 [csharp] view plaincopy
 [tableView triggerPullToRefresh];  
+````
 
-4、临时性禁用下拉刷新
+## 临时性禁用下拉刷新
+
+```objc
+
 [csharp] view plaincopy
 tableView.showsPullToRefresh = NO;  
 SVPullToRefresh的UI支持自定义
@@ -44,11 +57,15 @@ SVPullToRefresh的UI支持自定义
 - (void)setTitle:(NSString *)title forState:(SVPullToRefreshState)state;  
 - (void)setSubtitle:(NSString *)subtitle forState:(SVPullToRefreshState)state;  
 - (void)setCustomView:(UIView *)view forState:(SVPullToRefreshState)state;  
-简单用法，比如下面一行代码就修改了下拉箭头的颜色。
+
+//简单用法，比如下面一行代码就修改了下拉箭头的颜色。
 [csharp] view plaincopy
 tableView.pullToRefreshView.arrowColor = [UIColor whiteColor];  
+````
 
 
-＝＝＝＝＝＝＝引用＝＝＝＝＝＝＝＝＝＝＝＝
+## 引用
+
 http://blog.csdn.net/itenric/article/details/12391185
+
 http://www.jianshu.com/p/783ac913120d

@@ -1,15 +1,21 @@
-MJRefreash的使用
+## MJRefreash的使用
 
-1:安装：
 
+## 1:安装：
+
+````
 cocoapods导入：pod 'MJRefresh'
 手动导入：
 将MJRefresh文件夹中的所有文件拽入项目中
 导入主头文件：#import "MJRefresh.h"
+````
 
+## 2：基本使用
 
-2：基本使用
+````objc
+
 - (void)configMJRefresh{
+
 	//配置上拉刷新和加载控件
     [self.table addHeaderWithTarget:self action:@selector(headerRereshing)];
     [self.table addFooterWithTarget:self action:@selector(footerRereshing)];
@@ -47,3 +53,4 @@ cocoapods导入：pod 'MJRefresh'
  }
 @end
 
+````
