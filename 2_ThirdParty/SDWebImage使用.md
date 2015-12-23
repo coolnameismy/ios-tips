@@ -1,18 +1,26 @@
-SDWebImage使用
+# SDWebImage使用
 
 
-==========================SDWebImage引用==============================================
+## SDWebImage引用
+
 SDWebImage 3.6 手动引用
+
+````
 1:下载SDWebImage.framework
 2:右键项目－add fileto  ，选择SDWebImage.framework
-
 3:添加依赖库 1:ImageIO 2:MapKit
 4:build setting => other linker flags: 添加参数-ObjC
+````
+
 注意！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-1：添加成功后项目中sdwebimage是以包出现的，并且bulid phases 中link binary中会增加sdwebimage
-2: 若不形行，先清理项目，删除生成的项目文件，再从新编译添加
--------------------------------------------------------------------------------------
+
+-  1：添加成功后项目中sdwebimage是以包出现的，并且bulid phases 中link binary中会增加sdwebimage
+-  2: 若不形行，先清理项目，删除生成的项目文件，再从新编译添加
+
+
 使用cocoapod添加
+
+````objc
 
 
 ==========================SDWebImage使用==============================================
@@ -98,3 +106,6 @@ SDImageCache类提供一个创建空缓存的实例，并用方法imageForKey:�
 ========================================================
 引用地址
 http://www.cnblogs.com/wangshengl9263/p/3347933.html
+
+````
+
