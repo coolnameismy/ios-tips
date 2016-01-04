@@ -14,3 +14,7 @@
 1.  格式是md
 2.  tips都很简短，不要涉及复杂的原理和方法
 
+## 其他资源
+
+[dev-tips](https://github.com/coolnameismy/dev-tips) 开发中常见问题的整理
+
