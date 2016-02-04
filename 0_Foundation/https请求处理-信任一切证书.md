@@ -140,8 +140,8 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
 
 ## 参考文章
 
+-[iOS: HTTPS 与自签名证书](http://blog.csdn.net/kmyhy/article/details/7733619)
 -[iOS - HTTPS](http://www.jianshu.com/p/4b5d2d47833d)
-
 -[iOS安全系列之一：HTTPS](http://oncenote.com/2014/10/21/Security-1-HTTPS/)
 -[iOS安全系列之二：HTTPS进阶](http://oncenote.com/2015/09/16/Security-2-HTTPS2/)
 -[Making HTTP and HTTPS Requests](https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WorkingWithHTTPAndHTTPSRequests/WorkingWithHTTPAndHTTPSRequests.html)
