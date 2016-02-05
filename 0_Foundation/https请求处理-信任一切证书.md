@@ -58,7 +58,7 @@ UIViewController.m
 
     
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    NSURLConnectionDataDelegate *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     
     [connection start];
 }
