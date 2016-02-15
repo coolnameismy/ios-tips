@@ -24,3 +24,22 @@ class MyManager  {
 }
 
 ````
+
+
+## 工厂方法
+
+````objc
+//正确
+ +(instancetype)factoryA{
+   return [[[self class]alloc]init];
+}
+
+//错误
++(id)factoryB{
+   return [[XXXXClass alloc]init];
+}
+````
+
+错误原因：
+-   主要在与返回值instancetype是安全类型，能更准确推断类型
+-  ```` [[XXXXClass alloc]init] ```` 在子类使用时不能返回正确的子类类型，所以需要使用 ````[[[self class]alloc]init];````  

@@ -10,6 +10,7 @@
 ## 技术博客
 ---
 
+-	[sunnyxx](http://blog.sunnyxx.com/)
 -	[刘彦玮的技术博客](http://liuyanwei.jumppo.com) | <http://liuyanwei.jumppo.com/pages/rss.xml>
 -	[念茜的博客](http://nianxi.net/) | <http://nianxi.net>
 -	[iwangke](http://www.iwangke.me/) | <http://www.iwangke.me>
