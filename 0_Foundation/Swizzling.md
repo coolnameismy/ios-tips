@@ -38,7 +38,13 @@
 #pragma mark - Method Swizzling
 
 - (void)xxx_viewWillAppear:(BOOL)animated {
-        [self xxx_viewWillAppear:animated];
+    [self xxx_viewWillAppear:animated];
     NSLog(@"viewWillAppear: %@", self);
 }
 ````
+
+## 注意
+
+-   Swizzling应该总是在+load中执行
+-   Swizzling应该总是在dispatch_once中执行
+-   
