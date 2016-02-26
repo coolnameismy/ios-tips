@@ -18,5 +18,6 @@
 ##  注意
 -	生成连接时候需要四个个文件，分别是两个image和一个ipa，manifest文件 必须发布在https协议的域名下
 -	图片尺寸为：512x512 和 57x57
+-	manifest.plist中ipa文件下载的地址必须使用http，而图片和manifest.plist文件则必须使用https地址
 
  

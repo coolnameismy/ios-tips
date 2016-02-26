@@ -1,7 +1,7 @@
 
 ## 用法总结
 
--	1:copy：一般来说，有对应Mutab版本的类型，在声明属性是，使用copy关键字作为声明,例如````等等经常使用copy关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDic````
+-	1:copy：一般来说，有对应Mutab版本的类型，在声明属性是，使用copy关键字作为声明,例如````等等经常使用copy关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDic```` ,此外block也用过使用copy
 
 -	2:strong：出copy的绝大多数情况下使用strong关键字。
 
