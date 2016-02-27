@@ -1,6 +1,7 @@
 ## ````#program常用标识 ````
 
 ##  1：注释代码段
+--- 
 
 ````
 #program mark -[注释内容]
@@ -9,6 +10,7 @@
 ````
 
 ## 2：取消xcode编译器内对于启用方法的警告
+--- 
 
 ````
 #pragma clang diagnostic push
@@ -19,6 +21,7 @@
 ````
 
 ##  3：取消对未使用变量的警告，使用法师和2相同，必须成对出现#pragma clang 
+--- 
 
 ````
 diagnostic ---
@@ -29,8 +32,15 @@ diagnostic ---
 #error : 手动产生一条错误
 ````
 
+还有种方式也能达到同样效果
+
+````
+ #pragma unused (foo)
+
+````
 
 ##  4: 忽略内存泄露告警
+--- 
 
 ````
 #pragma clang diagnostic push 
