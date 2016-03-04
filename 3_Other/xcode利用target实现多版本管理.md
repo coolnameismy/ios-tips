@@ -11,9 +11,16 @@
 
 ### 修改资源文件引用
 
+
 选择对应的target -> build phases -> copy bundle resouces 修改指定版本对应的图片路径。
 
-通过这种方式能解决不同版本编译出来的app界面对应的差异。
+通过这种方式能解决不同版本编译出来的appui界面对应的差异。
+
+此外，修改还可以修改不同targets对应不同的图标icon和启动画面
+````
+1：Asset xcassets -> App Icons & launch Images -> New Ios App Icon 	
+2：general -> App Icons & launch Images -> 选择对应的icons和启动images
+````
 
 
 ### 修改源代码引用
@@ -21,6 +28,12 @@
 选择对应的target -> build phases -> compile source 修改指定版本对应编译文件路径。
 
 通过这种方式能解决不同版本编译出来的app代码的差异
+
+也可以通过xcode属性菜单中选择文件所属的target，这种方式更快捷一些。
+
+
+### 修改pch文件的引用
+可以定义多个pch文件，并在target -> build setting ->  prefix header,修改不同target对应的pch文件路径
 
 
 ### 其他
@@ -47,3 +60,16 @@
 ````
 
 
+
+## 注意点
+
+-	1.当你将新文件添加到项目时，别忘了同时选择多个Targets，保持代码在两个版本中同步。 
+-	2.如果你使用Cocoapods，别忘了将新的target添加到podfile。你可以使用 link_with来指定多个targets。你可以进一步查询Cocoapods documentation了解更多细节。你的podfile看起来应该像这样
+
+```` 
+platform :ios, '7.0'  
+workspace 'xxx'  
+link_with 'target1', 'target2'  
+pod 'xxx'  
+
+````
