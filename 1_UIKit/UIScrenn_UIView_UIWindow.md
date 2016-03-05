@@ -22,6 +22,6 @@ CGrect screenBounds = [[UIScreen mainScreen] bounds];//返回的是带有状态�
 
 ````objc
 
-示例：self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease]
+示例：self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]
 
 ````
