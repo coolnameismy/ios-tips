@@ -237,8 +237,10 @@ XCTFail(format...) //直接Fail的断言
 -	cmd + U 运行整个单元测试
 
 ##  注意点
+>   都是血与泪的教训
 
--	使用pod的项目中，在XC测试框架中测试内容包括第三方包时，需要手动去设置Header Search Paths才能找到头文件 ，还需要设置test target的PODS_ROOT。
+-   使用pod的项目中，在XC测试框架中测试内容包括第三方包时，需要手动去设置Header Search Paths才能找到头文件 ，还需要设置test target的PODS_ROOT。
+-   xcode7要使用真机做跑测试时，证书必须配对，否则会报错`exc_breakpoint`错误
 
 ##  参考阅读
 

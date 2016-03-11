@@ -8,7 +8,7 @@
 
 例如：
 ````
-<a href="itms-services://?action=download-manifest&url=https://mydomain.com/apps/MyInHouseApp.plist" id="text">Install the In-House App</a> 
+<a href="itms-services://?action=download-manifest&url=https://mydomain.com/apps/MyInHxcodelouseApp.plist" id="text">Install the In-House App</a> 
 ````
 
 
