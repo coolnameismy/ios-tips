@@ -1,6 +1,6 @@
-#(一)类型
+#  (一)类型
 
-##常见类型
+##  常见类型
 
 ````swift
 Int,String,Double,struct,enum,class,tuple
@@ -126,7 +126,7 @@ Sharp.RawValue(1)
 Sharp.Rect.desc()
 
 ````
-##结构struct
+## 结构struct
 
 ````swift
 //结构
@@ -146,7 +146,7 @@ struct Sharp{
     }
 }
 ````
-##协议
+## 协议
 
 ````swift
 
@@ -171,7 +171,7 @@ protocol Sharp{
 
 ````
 
-##对象
+## 对象
 
 ````swift
 class Card: NSObject {
@@ -286,9 +286,9 @@ class Person: NSObject {
 
 #（二）语法
 
-##流程控制
+## 流程控制
 
-###if语句
+### if语句
 
 ````swift
 
@@ -299,7 +299,7 @@ if let theStr = str2 {
 
 ````
 
-###switch
+### switch
 
 ````swift
 //switch 数字区间
@@ -352,7 +352,7 @@ switch num {
 
 
 
-##函数
+## 函数
 
 ````swift
 
@@ -436,7 +436,7 @@ func myswap<T>(inout obj1:T,inout _ obj2:T){
 
 ````
 
-##闭包
+## 闭包
 
 ````swift
 
@@ -633,7 +633,7 @@ public struct UIViewAutoresizing : OptionSetType {
 #（三）高级
 
 
-##柯里化 (Currying)
+##  柯里化 (Currying)
 > 柯里化是一种量产类似方法的好办法，可以通过柯里化一个方法模板来避免写出很多重复代码
 
 ````swift
@@ -644,7 +644,7 @@ let addToFour = addTwoNumbers(4)    // addToFour 是一个 Int -> Int
 let result = addToFour(num: 6)      // result = 10
 ````
 
-## 封装局部变量
+##  封装局部变量
 > 封装局部变量可以减少变量之间的冲突
 
 ````swift
@@ -656,7 +656,7 @@ var str:String = {
 ````
 
 
-## 方法调用的另一种方式
+##  方法调用的另一种方式
 
 ````swift
 
@@ -689,7 +689,7 @@ funcOnPerson2()
 
 ````
 
-##swift单例标准写法
+##  swift单例标准写法
 
 ````swift
 
@@ -702,4 +702,14 @@ class MyManager  {
 
 ````
 
+## fatalError
+
+由于Swift中的断言和objc的区别在于，swift断言只在Debug模式下起作用，在Release版本中就会被忽略，而objc断言都会起作用，所以swift常常使用fatalError主动抛出一个致命错误。
+
+例如：
+
+````swift
+ guard let splitViewController = self.window!.rootViewController as? UISplitViewController else { fatalError("Unexpected view controller setup") }
+        
+````
 
