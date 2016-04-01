@@ -45,6 +45,12 @@ cmd = Command  ctrl = control  sft = shift   opt = Option   * = click
 -	在自定义尺寸导航到代码 cmd + sft + opt + * 
 -   跳转到行 cmd + l 
 
+##  调试
+
+Command + R  运行。
+Command + .  停止
+F6单步调试、F7跳入，F8继续
+
 
 ##  快速预览图
 
