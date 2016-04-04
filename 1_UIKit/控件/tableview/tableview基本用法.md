@@ -218,3 +218,31 @@
 
 ````
 
+
+##  ios6 以后的新用法
+
+
+旧的方法
+
+````objc
+
+static NSString *ID = @"cell";
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID]; 
+}
+
+````
+
+新方法可以这样用
+
+````objc
+static NSString *ID = @"cell";
+[self.tableView registerClass:[MyCell class] forCellReuseIdentifier:ID];
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+
+````
+
+区别在于之前的写法取出重用cell的时候可能是空的
+而后来的写法如果取出空的那就自动创建一个新的 register就是告诉它创建个什么样的
+
