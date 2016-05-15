@@ -34,13 +34,13 @@
 
 ````
 代码: __weak __typeof(self) weakSelf = self;
-名称:weakify
-快捷键:weakify
+名称:weakify-snippet
+快捷键:weakify-snippet
 类型:code expression
 
 代码:__strong __typeof(weakSelf) strongSelf = weakSelf;
-名称:weakify
-快捷键:weakify
+名称:weakify-snippet
+快捷键:weakify-snippet
 类型:code expression
 
 ````
