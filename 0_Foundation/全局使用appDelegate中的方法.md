@@ -1,0 +1,1 @@
+id<appDelegatexxxInterface> appDelegate = (id)[UIApplication sharedApplication].delegate;
