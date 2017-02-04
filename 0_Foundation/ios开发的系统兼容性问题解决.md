@@ -19,11 +19,10 @@
     if([picker respondsToSelector:@selector(dismissModalViewControllerAnimated:)]){
         [picker dismissModalViewControllerAnimated:YES completion:nil];
     }
-    else
+#else{
+	 [picker dismissViewControllerAnimated:YES completion:nil];
+}
 #endif
-    {
-        [picker dismissViewControllerAnimated:YES completion:nil];
-    }
 
 ````
 
@@ -37,4 +36,16 @@ if([picker respondsToSelector:@selector(imagePickerController:didFinishPickingMe
     [picker dismissModalViewControllerAnimated:YES];
 }
 
+````
+
+##  4: 获取系统版本号进行判断 （书写方便，但是会产生警告）
+
+````objc
+if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 9) {
+    if (!self.centralManager.isScanning) {
+        [self.centralManager scanForPeripheralsWithServices:nil options:nil];
+    }
+} else {
+    [self.centralManager scanForPeripheralsWithServices:nil options:nil];
+}
 ````
